@@ -1,0 +1,45 @@
+import requests
+from bs4 import BeautifulSoup
+import google.generativeai as genai
+
+# 1. Cài đặt chìa khóa AI (Google Gemini API Key)
+genai.configure(api_key="NHẬP_API_KEY_CỦA_BẠN_VÀO_ĐÂY")
+model = genai.GenerativeModel('gemini-pro')
+
+def lay_tin_tuc_thuy_san():
+    # 2. Đi tới một trang báo để lấy tin (Ví dụ minh họa)
+    url = "https://seafoodnews_example.com"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Giả sử lấy được đoạn văn bản tin tức
+    tin_tho = soup.find('div', class_='article-content').text
+    return tin_tho
+
+def tom_tat_bang_ai(tin_tho):
+    # 3. Yêu cầu AI dịch và tóm tắt
+    prompt = f"Bạn là chuyên gia thủy sản. Hãy dịch và tóm tắt tin tức sau thành 2 câu tiếng Việt dễ hiểu:\n{tin_tho}"
+    response = model.generate_content(prompt)
+    return response.text
+
+def cap_nhat_website(tin_moi):
+    # 4. Mở file HTML và cập nhật nội dung
+    with open('index.html', 'r', encoding='utf-8') as file:
+        html_content = file.read()
+    
+    # Tìm thẻ có id "tin-tuc-hom-nay" và thay thế nội dung bên trong
+    # (Bạn sẽ cần thêm <div id="tin-tuc-hom-nay"></div> vào file HTML ban đầu)
+    phan_dau, phan_cuoi = html_content.split('')
+    phan_giua, phan_ket = phan_cuoi.split('')
+    
+    html_moi = f"{phan_dau}\n<p>{tin_moi}</p>\n{phan_ket}"
+    
+    with open('index.html', 'w', encoding='utf-8') as file:
+        file.write(html_moi)
+    print("Đã cập nhật website thành công!")
+
+# Chạy hệ thống
+if __name__ == "__main__":
+    tin_tuc_moi = lay_tin_tuc_thuy_san()
+    tom_tat = tom_tat_bang_ai(tin_tuc_moi)
+    cap_nhat_website(tom_tat)
