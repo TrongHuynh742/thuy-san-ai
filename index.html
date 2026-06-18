@@ -247,3 +247,14 @@
         <a href="https://vasep.com.vn/gia-thuy-san" target="_blank" class="btn" style="background-color: #e67e22;">Xem Bảng Giá Tại VASEP</a>
     </div>
 </div>
+<header>
+    <h1>Cổng Thông Tin Số Hóa Thủy Sản</h1>
+    <p>Cập Nhật Công Nghệ AI & Tiêu Chuẩn Quốc Tế 2026</p>
+    <!-- Hiển thị ngày tự động -->
+    <p id="current-date" style="font-weight: bold; margin-top: 10px;"></p>
+    <script>
+        const date = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = "Cập nhật ngày: " + date.toLocaleDateString('vi-VN', options);
+    </script>
+</header>
