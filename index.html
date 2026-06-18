@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Số Hóa Thủy Sản Đất Mũi</title>
     <style>
-        :root { --primary-color: #003566; --secondary-color: #0077b6; }
         body { font-family: sans-serif; margin: 0; background: #edf2fb; color: #333; }
         
         /* Banner ảnh rừng đước */
@@ -14,151 +13,22 @@
             background-size: cover; background-position: center;
             color: white; text-align: center; padding: 5rem 1rem;
         }
-        .container { max-width: 900px; margin: -2rem auto 2rem; padding: 0 1rem; }
+        
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
         .card { background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 1.5rem; }
-        .btn { display: inline-block; padding: 12px 25px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
+        .btn { display: inline-block; padding: 12px 25px; background: #003566; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
     </style>
 </head>
 <body>
+
 <header>
     <h1>Cổng Thông Tin Số Hóa Thủy Sản</h1>
-    <p>Cập Nhật Công Nghệ AI & Tiêu Chuẩn Quốc Tế 2026</p>
-    <p id="current-date" style="font-weight: bold; color: #94d2bd; margin-top: 10px;"></p>
+    <p>Công nghệ AI & Tiêu chuẩn Quốc tế - Đất Mũi, Cà Mau</p>
+    <p id="date" style="font-weight: bold; color: #94d2bd;"></p>
     <script>
-        const date = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('current-date').innerText = "Cập nhật ngày: " + date.toLocaleDateString('vi-VN', options);
+        const d = new Date();
+        document.getElementById('date').innerText = "Cập nhật: " + d.toLocaleDateString('vi-VN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     </script>
-</header>
-</header>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xu Hướng Thủy Sản & Chứng Nhận Quốc Tế 2026</title>
-    <style>
-        :root {
-            --primary-color: #005f73;
-            --secondary-color: #0a9396;
-            --accent-color: #94d2bd;
-            --text-color: #333;
-            --bg-color: #f8f9fa;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-        .card {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .chart-container {
-            margin-top: 1.5rem;
-        }
-        .bar-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .bar-label {
-            width: 150px;
-            font-weight: bold;
-        }
-        .bar-track {
-            flex-grow: 1;
-            background-color: #e9ecef;
-            border-radius: 4px;
-            height: 24px;
-            overflow: hidden;
-        }
-        .bar-fill {
-            height: 100%;
-            background-color: var(--secondary-color);
-            display: flex;
-            align-items: center;
-            padding-left: 10px;
-            color: white;
-            font-weight: bold;
-            font-size: 0.85rem;
-        }
-        .summary-box {
-            background-color: #e0fbfc;
-            border-left: 5px solid #ee6c4d;
-            padding: 1.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #293241;
-            border-radius: 4px;
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background-color: #333;
-            color: white;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-    </header>
-
-    <div class="container">
-        
         <!-- Phần 1: Công nghệ -->
         <div class="card">
             <h2>1. Xu Hướng AI & Tự Động Hóa Trại Nuôi</h2>
