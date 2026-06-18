@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <header style="background-image: linear-gradient(rgba(0, 53, 102, 0.7), rgba(0, 53, 102, 0.7)), url('background.jpg'); background-size: cover; background-position: center; padding: 5rem 1rem;">
-    <h1 style="color: white; text-shadow: 2px 2px 4px #000;">Cổng Thông Tin Số Hóa Thủy Sản</h1>
-    <p style="color: white; font-size: 1.2rem;">Cập Nhật Công Nghệ AI & Tiêu Chuẩn Quốc Tế 2026</p>
-    <p id="current-date" style="font-weight: bold; color: #94d2bd; margin-top: 10px;"></p>
-    <script>
-        const date = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('current-date').innerText = "Cập nhật ngày: " + date.toLocaleDateString('vi-VN', options);
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Thông Tin Số Hóa Thủy Sản 2026</title>
+    <style>
+        :root { --primary-color: #003566; --secondary-color: #0077b6; --accent-color: #00b4d8; --bg-color: #edf2fb; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background-color: var(--bg-color); margin: 0; padding: 0; }
+        
+        /* Banner chuyên nghiệp */
+        header { 
+            background: linear-gradient(135deg, rgba(0, 53, 102, 0.8), rgba(0, 119, 182, 0.8)); 
+            color: white; text-align: center; padding: 4rem 1rem;
+        }
+        h1 { margin: 0; font-size: 2.5rem; }
+        
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 2rem; margin-bottom: 1.5rem; border-left: 5px solid var(--secondary-color); }
+        .btn { display: inline-block; padding: 12px 25px; background: var(--primary-color); color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
+        footer { text-align: center; padding: 2rem; color: #666; }
+    </style>
+</head>
+<body>
 </header>
     <header>
-    <h1>Cổng Thông Tin Số Hóa Nuôi Trồng Thủy Sản</h1>
-    <p>Cập Nhật Công Nghệ AI & Tiêu Chuẩn Quốc Tế 2026</p>
     <!-- Hiển thị ngày tự động -->
     <p id="current-date" style="font-weight: bold; margin-top: 10px;"></p>
     <script>
