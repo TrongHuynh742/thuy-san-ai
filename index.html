@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <header style="background-image: linear-gradient(rgba(0, 53, 102, 0.7), rgba(0, 53, 102, 0.7)), url('background.jpg'); background-size: cover; background-position: center; padding: 5rem 1rem;">
+    <h1 style="color: white; text-shadow: 2px 2px 4px #000;">Cổng Thông Tin Số Hóa Thủy Sản</h1>
+    <p style="color: white; font-size: 1.2rem;">Cập Nhật Công Nghệ AI & Tiêu Chuẩn Quốc Tế 2026</p>
+    <p id="current-date" style="font-weight: bold; color: #94d2bd; margin-top: 10px;"></p>
+    <script>
+        const date = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = "Cập nhật ngày: " + date.toLocaleDateString('vi-VN', options);
+    </script>
+</header>
     <header>
     <h1>Cổng Thông Tin Số Hóa Nuôi Trồng Thủy Sản</h1>
     <p>Cập Nhật Công Nghệ AI & Tiêu Chuẩn Quốc Tế 2026</p>
