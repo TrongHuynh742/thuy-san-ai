@@ -1,0 +1,28 @@
+name: Tự động cập nhật nội dung 7h sáng
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 00:00 giờ Quốc tế (UTC) chính xác là 7:00 giờ sáng Việt Nam
+  workflow_dispatch: # Kích hoạt tính năng cho phép bạn bấm chạy bằng tay bất kỳ lúc nào
+
+jobs:
+  update-web:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kiểm tra mã nguồn công việc
+        uses: actions/checkout@v4
+
+      - name: Cài đặt Python hệ thống
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Chạy Robot Python cập nhật dữ liệu
+        run: python update_daily.py
+
+      - name: Lưu và đẩy dữ liệu mới lên GitHub
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          git add index.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Robot tự động cập nhật dữ liệu môi trường QCVN" && git push)
